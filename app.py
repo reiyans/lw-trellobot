@@ -24,7 +24,7 @@ def index():
     return 'Start', 200
 
 
-@app.route('/webhook', methods=['HEAD', 'POST'])
+@app.route('/webhook', methods=['GET', 'HEAD', 'POST'])
 def webhook():
     if request.method == 'GET':
         return 'Start', 200

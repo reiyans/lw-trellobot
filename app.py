@@ -3,7 +3,7 @@
 import os
 
 from flask import Flask, abort, request
-from lineworks import TalkBotApi
+from lineworks.talkbot_api import TalkBotApi
 
 
 app = Flask(__name__)
@@ -29,7 +29,7 @@ def webhook():
     if request.method == 'GET':
         return 'Start', 200
     elif request.method == 'HEAD':
-        return '',200
+        return '', 200
     elif request.method == 'POST':
         action_type = request.json['action']['display']['translationKey']
         if action_type == 'action_comment_on_card':

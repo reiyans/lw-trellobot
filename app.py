@@ -45,5 +45,21 @@ def webhook():
         abort(400)
 
 
+@app.route('/create_room', methods=['GET'])
+def create_room():
+    if request.method == 'GET':
+        account_ids = [
+            "任意のアカウントID",
+            "任意のアカウントID",
+            "任意のアカウントID",
+            "任意のアカウントID",
+            "任意のアカウントID"
+        ]
+        res = talkbot.create_room(account_ids=account_ids, title="任意のトークルーム名（例：Trello Bot）")
+        return res, 200
+    else:
+        abort(400)        
+        
+
 if __name__ == '__main__':
     app.run()

@@ -14,7 +14,7 @@ py-trello==0.15.0
 pycryptodome==3.8.2
 python-dateutil==2.8.0
 pytz==2019.2
-PyYAML==5.1.2
+PyYAML==5.4
 requests==2.22.0
 requests-oauthlib==1.2.0
 shellescape==3.4.1
